@@ -1,0 +1,688 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "roboto", sans-serif; /* Chỉnh phông chữ cho toàn bộ trang */
+  box-sizing: border-box; /* Thuộc tính box-sizing giúp kiểm soát kích thước của phần tử dựa vào tính chất width và height */
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.conterner {
+  display: flex; /* Sử dụng flexbox để căn chỉnh các phần tử bên trong thẻ conterner theo chiều ngang */
+  align-items: center; /* Căn giữa các phần tử bên trong thẻ conterner theo chiều dọc */
+  padding: 10px 0;
+  box-shadow: 0 1px 6px 0 rgb(32 33 36 / 10);
+  background: #f9f9f9;
+  width: 100%;
+  position: relative;
+}
+
+.conterner .logo img {
+  width: 110px;
+  height: 110px;
+  margin-left: 40px; /* Định nghĩa kích thước và vị trí của logo trong thẻ header */
+}
+
+.menu ul {
+  list-style-type: none; /* Loại bỏ kiểu danh sách mặc định cho các mục trong menu */
+  display: flex; /* Sử dụng flexbox để căn chỉnh các mục trong menu */
+  margin-bottom: 30px; /*khoảng cách từ dưới viền xịch lên*/
+}
+
+.conterner .menu a {
+  text-decoration: none; /* Loại bỏ gạch chân cho các liên kết trong menu */
+  font-weight: bold; /* Định nghĩa kiểu chữ in đậm cho các liên kết trong menu */
+  margin: 0px 36px; /*khoảng cách giữa các phần tử*/
+  color: black; /* Định nghĩa màu chữ cho các liên kết trong menu */
+  font-size: 18px; /* Định nghĩa kích thước chữ cho các mục trong menu */
+}
+
+nav.menu {
+  margin-top: 35px;
+  position: absolute;
+  right: 170px;
+}
+
+/*phần hiệu ứng khi hover vô các giá trị bên trong menu*/
+.menu li a {
+  position: relative; /* Đặt vị trí tương đối cho phần tử li */
+}
+.menu li a::after {
+  content: ""; /* Thêm nội dung vào phần tử ::after */
+  position: absolute; /* Đặt vị trí tuyệt đối cho phần tử ::after */
+  bottom: 0; /* Đặt phần tử ::after ở phía dưới */
+  left: 50%; /* Đặt phần tử ::after ở giữa theo trục X */
+  width: 0; /* Đặt chiều rộng ban đầu của phần tử ::after là 0 */
+  height: 3px; /* Đặt chiều cao của phần tử ::after */
+  background-color: rgb(185, 52, 52); /* Đặt màu nền cho phần tử ::after */
+  transition: transform 0.3s ease, width 0.3s ease; /* Thêm hiệu ứng chuyển đổi cho transform và width */
+  transform: translateX(-50); /* Di chuyển phần tử ::after ở giữa theo trục X */
+}
+
+.menu li a:hover::after {
+  width: 100%; /* Mở rộng chiều rộng của phần tử ::after tới 100% */
+  transform: translateX(-50%); /* Giữ nguyên vị trí ở giữa theo trục X */
+}
+.menu li a:hover {
+  color: rgb(185, 52, 52); /* Thay đổi màu chữ khi hover vào liên kết */
+}
+
+.log-user {
+  position: absolute;
+  right: 10px;
+  width: 100px;
+  height: 50px;
+  border: 2px solid rgb(12, 11, 11);
+  text-align: center;
+  border-radius: 10px;
+  transition: 0.4s linear;
+  overflow: hidden;
+}
+
+.log-user span {
+  line-height: 50px;
+}
+
+.log-user a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding-inline: 5px;
+  height: 50px;
+  transition: transform 0.4s linear;
+}
+
+.log-user:hover {
+  background-color: rgb(185, 52, 52);
+}
+
+.log-user:hover a {
+  color: #fff;
+  transform: scale(0.9);
+}
+
+#slide img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*----------------menu on mobile------------------------------------------------*/
+.nav_btn {
+  font-size: 50px;
+  display: none;
+  cursor: pointer;
+}
+
+.nav_mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 320px;
+  max-width: 100%;
+  background: #fff;
+  transform: translateX(-100%);
+  transition: all linear 0.2s;
+  z-index: 2;
+}
+.nav_mb-list {
+  margin-top: 26px;
+  margin-left: 43px;
+  list-style-type: none;
+}
+.nav_moblie-link {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 8px 4px;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.nav_icon_close {
+  font-size: 2.5rem;
+  color: #666;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+.nav_overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none;
+  animation: modan linear 0.2s;
+  z-index: 1;
+}
+.nav__input {
+  display: none;
+}
+.nav__input:checked ~ .nav_overlay {
+  display: block;
+}
+.nav__input:checked ~ .nav_mobile {
+  transform: translateX(0%);
+}
+@keyframes modan {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.nav_mb-list i {
+  font-weight: bold;
+  font-size: 30px;
+  padding: 10px 10px;
+}
+/*-----------------end nav mobile-------------------------------------------------------*/
+h2.about_title {
+  text-align: center;
+  font-size: 50px;
+  text-transform: uppercase;
+  padding-block: 20px;
+}
+#abouts .items_content {
+  width: 85%;
+  height: auto;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #333;
+}
+#abouts .items_content .items {
+  flex: 50%;
+  height: auto;
+}
+#abouts .items_content .items img {
+  max-width: 100%;
+  height: 100%;
+}
+#abouts .items_content .content {
+  flex: 50%;
+  padding: 30px;
+  color: #fff;
+  padding-top: 15px;
+}
+#abouts .items_content .content h3 {
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 5px;
+}
+#abouts .items_content .content p {
+  font-size: 15px;
+  line-height: 1.2rem;
+  padding: 10px 0;
+  padding-top: 31px;
+}
+.items_content .content button {
+  background-color: #931616;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.items_content .content button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, #ff0000, #ff9900);
+  transition: left 0.5s;
+}
+
+.items_content .content button:hover::before {
+  left: 100%;
+}
+/*------------------------------------about-------------------------*/
+h2.product_title {
+  text-align: center; /* Căn giữa tiêu đề của phần About Us */
+  background: rgb(255, 254, 254);
+  color: rgb(0, 0, 0);
+  padding: 12px 0px 0px; /* nêu có ba giá trị thì: 1:đệm trên 2: trái phải 3: đệm dưới*/
+  /* padding là canh chỉnh nội không gian bên trong phần tử đã có đường viền*/
+  /*nếu padding chỉ có một giá trị nó sẽ tự hiểu là 4 giá trị sẽ bằng nhau*/
+  font-size: 50px;
+}
+
+/*//////////////////////////////the card giay///////////////////////*/
+
+.card {
+  width: 320px;
+  height: 375px;
+  background: rgb(234, 227, 227);
+  border-radius: 15px;
+  padding: 30px; /*noi dung bên trong thẻ card sẽ cách viền 30px*/
+  position: relative;
+  margin: 20px 40px;
+}
+
+.card_heart,
+.card_cart {
+  font-size: 25px;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
+
+.card_cart {
+  left: unset; /*--thuộc tính này sẽ đặt lại giá trị của icon lại vị trí mặt định--*/
+  right: 20px;
+}
+
+.card_img {
+  width: 90%;
+}
+
+.card_img img {
+  object-fit: cover;
+  transition: 0.5s; /*tao ra chuyen dong muot ma cho hieu ung*/
+}
+
+.card_title,
+.card_price {
+  font-family: Helvetica;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.card_color,
+.card_size {
+  display: flex;
+  align-items: center; /* Thuộc tính align-items: center; trong class .card_color và .card_size giúp căn giữa các mục con theo trục thẳng đứng trong 
+  các container có class này. Điều này giúp thẻ <h3> và các thẻ <span> chứa kích cỡ và màu sắc giày được căn giữa và nằm ở giữa container theo chiều dọc. */
+  margin-bottom: 10px; /* Thuộc tính margin-bottom: 10px; trong class .card_color và .card_size giúp đặt khoảng cách lề dưới là 10px 
+  cho các container có class này. Điều này tạo khoảng cách giữa các container này và phần tử tiếp theo dưới chúng. */
+}
+.card_size span {
+  padding: 1px 10px; /* gia tri dau tien la canh tren va duoi ben trong khung size| con cai cuoi cung la canh
+  trai  va phai*/
+  background: #fff;
+  border-radius: 5px;
+  margin: 0 5px; /* gia tri dau tien duoc ap dung canh chinh tren va duoi cua phan tu|con gia
+  tri thu 2 duoc ap dung canh trai va phai*/
+}
+.card_color span {
+  width: 15px;
+  height: 15px; /* Đặt chiều rộng và chiều cao cho các thẻ <span> là 15px.*/
+  border-radius: 50%; /*Đặt bo tròn cho các thẻ <span> là 50%
+   tạo hiệu ứng hình tròn cho các thẻ này. */
+  margin: 0 5px; /*Đặt khoảng cách lề trên và dưới là 0px, và khoảng cách lề trái và phải là 5px cho các thẻ <span>.
+   Điều này tạo khoảng cách giữa các thẻ <span> chứa màu sắc giày.*/
+}
+.card_color-green {
+  background: green;
+}
+.card_color-red {
+  background: red;
+}
+.card_color-black {
+  background: black;
+}
+.card_action button {
+  background: #8b7d7b;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-right: 15px; /* 0: la tren va duoi cua gia tri khong thay doi
+  con 13px la canh trai phai,khoan cach giua cac gia tri voi nhau */
+  transition: 0.25s;
+  cursor: pointer;
+}
+.card_img:hover img {
+  transform: scale(1.1);
+}
+.card_heart:hover {
+  color: red;
+  cursor: pointer; /*create animation khi re chuot vo trai tim se hien ban tay*/
+}
+.card_cart:hover,
+.card_size:hover span,
+.card_color:hover span {
+  cursor: pointer;
+}
+
+.card_action button:hover {
+  transform: scale(0.9);
+  background: green;
+}
+.card_action button a {
+  text-decoration-line: none;
+  color: black;
+}
+
+article {
+  justify-content: center;
+  clear: both;
+  padding: 7px 0px;
+}
+
+.product {
+  display: flex;
+  float: left;
+  width: 100%;
+}
+/*-----------------------------------------------------------------*/
+h2.seller_title {
+  text-align: center; /* Căn giữa tiêu đề của phần About Us */
+  background: rgb(255, 254, 254);
+  color: rgb(0, 0, 0);
+  padding: 12px 0px 0px; /* nêu có ba giá trị thì: 1:đệm trên 2: trái phải 3: đệm dưới*/
+  /* padding là canh chỉnh nội không gian bên trong phần tử đã có đường viền*/
+  /*nếu padding chỉ có một giá trị nó sẽ tự hiểu là 4 giá trị sẽ bằng nhau*/
+  font-size: 50px;
+}
+/*------------------------------------------------------------------phần review------------------------------------------*/
+h2.review_title {
+  text-align: center; /* Căn giữa tiêu đề của phần About Us */
+  background: rgb(255, 254, 254);
+  color: rgb(0, 0, 0);
+  padding: 12px 0px 0px; /* nêu có ba giá trị thì: 1:đệm trên 2: trái phải 3: đệm dưới*/
+  /* padding là canh chỉnh nội không gian bên trong phần tử đã có đường viền*/
+  /*nếu padding chỉ có một giá trị nó sẽ tự hiểu là 4 giá trị sẽ bằng nhau*/
+  font-size: 50px;
+}
+
+.review_card {
+  width: 311px;
+  height: 395px;
+  border-radius: 15px;
+  margin-left: 80px;
+  float: left;
+  align-items: center;
+  margin-bottom: 3%;
+  margin-top: 3%;
+  background: rgb(234, 227, 227);
+}
+.review_thongtin img {
+  border-radius: 50%; /*tạo hình ảnh tròn*/
+  margin-left: 52px;
+}
+.user_location,
+.star {
+  margin-left: 95px;
+}
+.user_location {
+  margin-top: 20px;
+}
+.review_content {
+  padding-top: 3%;
+  padding-inline: 2%;
+}
+.star i {
+  color: #ffa500;
+}
+.review {
+  margin: 0;
+}
+/*-----------------phần contact us--------------------------------------*/
+h2.contact_title {
+  text-align: center; /* Căn giữa tiêu đề của phần About Us */
+  background: rgb(255, 254, 254);
+  color: rgb(0, 0, 0);
+  font-size: 50px;
+}
+
+#contact {
+  padding-bottom: 100px;
+}
+.contact_title {
+  padding-bottom: 20px;
+}
+.map_contact {
+  width: 85%;
+  height: auto;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #333;
+}
+#contact .map {
+  width: 100%;
+  flex: 50%;
+  height: auto;
+}
+#contact .map iframe {
+  width: 100%;
+  height: 100%;
+}
+#contact .form_submit {
+  width: 100%;
+  height: auto;
+  flex: 50%; /*nó sẽ chiếm 50% của không gian hiển thị trong container */
+  padding: 30px;
+  text-align: center;
+}
+.form_submit h2.title_form {
+  margin-block: 15px;
+  color: #fff;
+  font-weight: bold;
+  font-family: Tahoma;
+}
+.contact-input {
+  width: 100%;
+  height: 40px;
+  color: #000;
+  border: 1px solid #bcbcbc;
+  line-height: 55px;
+  outline: none;
+  margin-bottom: 20px;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: Tahoma;
+  padding-left: 10px;
+}
+.form_textarea {
+  width: 100%;
+  height: 130px;
+  color: #000;
+  border: 1px solid #bcbcbc;
+  outline: none;
+  margin-bottom: 20px;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: Tahoma;
+}
+.btn-submit {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: rgb(241, 241, 241);
+  color: black;
+  transition: all 0.3s linear;
+  text-transform: Uppercase;
+  font-weight: bold;
+  padding: 10px 0;
+  font-family: Tahoma;
+  font-size: 20px;
+  cursor: pointer;
+}
+.btn-submit:hover {
+  background: rgb(185, 52, 52);
+  color: #f9f9f9;
+  transform: sacale(0.9);
+}
+
+/*----------------------------------------------------------------*/
+
+/* CSS cho phần footer */
+footer {
+  background-color: #f9f9f9;
+  padding: 30px 0;
+  text-align: center;
+  box-shadow: 0 1px 6px 0 rgb(32 33 36 / 10);
+}
+
+.footer_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer_logo img {
+  height: 100px;
+}
+
+.footer_menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer_menu ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.footer_menu ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.footer_menu ul li a:hover {
+  color: rgb(185, 52, 52);
+}
+
+.footer_social a {
+  color: #333;
+
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.footer_social a:hover {
+  color: rgb(185, 52, 52);
+}
+
+.footer_text p {
+  color: #777;
+  font-size: 14px;
+  margin-top: 20px;
+}
+.footer_social i:hover {
+  transform: translateY(-4px);
+}
+.footer_social i {
+  transition: 0.5s ease;
+  margin-left: 10px;
+}
+/*------*/
+.back_top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  cursor: pointer;
+}
+.back_top i {
+  font-size: 45px;
+}
+
+@media (max-width: 780px) {
+  .content p {
+    margin-block: 5px;
+    padding: 0;
+    font-size: 1rem;
+  }
+  h2.product_title {
+    margin-bottom: 21px;
+  }
+  h2.seller_title {
+    margin-bottom: 54px;
+  }
+  h2.product_title,
+  h2.seller_title,
+  h2.about_title,
+  h2.review_title,
+  h2.contact_title {
+    font-size: 30px;
+  }
+
+  .card {
+    margin: 30px auto;
+  }
+  .review_card {
+    margin-inline: auto;
+  }
+  article {
+    padding: 0;
+    margin-top: -24px;
+  }
+
+  .nav_btn {
+    display: block;
+  }
+  nav.menu,
+  .log-user {
+    display: none;
+  }
+  .conterner .logo img {
+    width: 100px;
+    height: 100px;
+    margin-left: 0;
+  }
+  footer#last {
+    height: 170px;
+  }
+  .footer_text p {
+    margin: 0;
+  }
+  .review_card {
+    float: none;
+  }
+  .map_contact {
+    flex-direction: column; /*nếu phần tử con bên trong bị tràn ra ngoài kích thước sẽ tự động xuống hàng*/
+  }
+  .items_content {
+    flex-direction: column; /*nếu phần tử con bên trong bị tràn ra ngoài kích thước sẽ tự động xuống hàng*/
+    width: 100%;
+  }
+}
+
+/*--------------------------------------------*/
+@media (max-width: 1029.33px) {
+  nav.menu {
+    display: none;
+  }
+  header.conterner {
+    justify-content: space-between;
+    height: 100px;
+  }
+  nav.menu,
+  .log-user {
+    display: none;
+  }
+  .nav_btn {
+    display: block;
+  }
+  .conterner .logo img {
+    margin-left: 0;
+  }
+  .product {
+    flex-wrap: wrap;
+  }
+  nav.footer_menu {
+    display: none;
+  }
+}

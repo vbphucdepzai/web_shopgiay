@@ -1,0 +1,763 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--dường link css-->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!--đây là đường link dẫn để tải phông chữ và các icon vào trong code của mình-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!--đường link icon-->
+    <link rel="shortcut icon" type="image/x-icon" href="image/icon.ico" />
+    <!--đường link cuộn mượt js-->
+    <script src="scrollnav.js"></script>
+    <!--đường link cuộn mượt nút-->
+    <script src="buttontotop.js"></script>
+    <title>PHUCXP-SHOES STORE</title>
+  </head>
+  <body>
+    <header class="conterner">
+      <div class="logo">
+        <a href="#">
+          <img src="image/logo.png" alt="PHUCXP-SHOES" />
+        </a>
+      </div>
+      <nav class="menu">
+        <ul>
+          <li><a href="index.html" class="nav_link">HOME</a></li>
+          <li><a href="#abouts" class="nav_link">ABOUT</a></li>
+          <li><a href="#product" class="nav_link">PRODUCT</a></li>
+          <li><a href="#review" class="nav_link">REVIEW</a></li>
+          <li><a  href="#contact" class="nav_link">CONTACT</a></li>
+        </ul> 
+      </nav>
+      <div class="log-user">
+        <a onclick="logout()"  href="login.html">
+          <span  class="logintext">LOGIN</span>
+        </a>
+      </div>
+      <label for="nav_mb-input" class="nav_btn">
+        <i class='bx bx-menu'></i>
+      </label>
+      <input type="checkbox" name=""class="nav__input" id="nav_mb-input">
+
+      <label  for="nav_mb-input" class="nav_overlay"></label>
+
+      <nav class="nav_mobile">
+        <label for="nav_mb-input" class="nav_icon_close">
+          <i class='bx bx-x-circle'></i>
+        </label>
+        <ul class="nav_mb-list">
+          <li><a href="#" class="nav_moblie-link"><i class='bx bxs-home'></i>HOME</a></li>
+          <li><a href="#abouts" class="nav_moblie-link"><i class='bx bxs-error-circle'></i></i>ABOUT</a></li>
+          <li><a href="#product" class="nav_moblie-link"><i class='bx bxl-product-hunt'></i>PRODUCT</a></li>
+          <li><a href="#review" class="nav_moblie-link"><i class='bx bxs-comment-detail'></i>REVIEW</a></li>
+          <li><a href="#contact" class="nav_moblie-link"><i class='bx bxs-contact'></i>CONTACT</a></li>
+          <li><a onclick="logout()" id="mbs" href="login.html" class="nav_moblie-link"><i class='bx bxs-user'></i>LOGIN</a></li>
+
+
+        </ul>
+      </nav>
+    </header>
+    <!------------------phần slide---------------------------->
+    <div id="slide">
+      <img src="image/JORDAN_BANNER.jpg" alt="slide-PHUCXP-SHOES STORE" />
+    </div>
+    <div id="abouts">
+      <h2 class="about_title"><span style="color:rgb(185, 52, 52)">ABOUT</span> US</h2>
+      <div class="items_content">
+      <div class="items">
+        <img
+          src="image/about.jpg"
+          alt="jodan11"
+        />
+      </div>
+      <div class="content">
+        <h3>What benefits do you receive when shopping at our shoe store?</h3>
+        <p>Chào mừng bạn đến với <strong>PHUCXP-SHOES STORE</strong> - cửa hàng giày sneakers 
+          hàng đầu tại Việt Nam. Chúng tôi cung cấp những đôi giày chất lượng cao, thời trang 
+          và đa dạng về mẫu mã. Với đội ngũ nhân viên nhiệt tình và chuyên nghiệp, chúng tôi 
+          sẵn sàng hỗ trợ và tư vấn cho bạn để lựa chọn được đôi giày ưng ý nhất.</p>
+          <p>Tại PHUCXP-SHOES STORE, chúng tôi luôn cập nhật những xu hướng thời trang mới 
+            nhất và mang đến cho khách hàng những sản phẩm độc đáo và cá tính. Đội ngũ chăm 
+            sóc khách hàng của chúng tôi sẽ đảm bảo bạn có trải nghiệm mua sắm tuyệt vời.</p>
+            <button type="button">Learn More</button>
+      </div>
+      </div>
+    </div>
+      <!----------------------------phần product------------------------->
+    <h2 class="product_title"  id="product">PRODUCT</h2>
+   <article class="product">
+    <!--đây là thẻ 1-->
+    <div class="card">
+      <div class="card_heart">
+        <i class="bx bx-heart"></i>
+      </div>
+      <div class="card_cart">
+        <i class="bx bx-cart-alt"></i>
+      </div>
+      <div class="card_img">
+        <img style="margin-left:20px" src="image/slide_off.png" width="185px" height="165px" />
+      </div>
+      <div class="card_title">Sandal Black Red White</div>
+      <div class="card_price">184,00 US$</div>
+      <div class="card_size">
+        <h3>Side:</h3>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+        <span>10</span>
+      </div>
+      <div class="card_color">
+        <h3>Color:</h3>
+        <span class="card_color-green"></span>
+        <span class="card_color-red"></span>
+        <span class="card_color-black"></span>
+      </div>
+      <div class="card_action">
+        <button><a href="thanhtoan.html">Buy now</a></button>
+
+        <button>Add cart</button>
+      </div>
+    </div>
+    <!--đây là thẻ 2-->
+    <div class="card">
+      <div class="card_heart">
+        <i class="bx bx-heart"></i>
+      </div>
+      <div class="card_cart">
+        <i class="bx bx-cart-alt"></i>
+      </div>
+      <div class="card_img" >
+        <img src="image/giay jodan.png" width="250px" height="165px" />
+      </div>
+      <div class="card_title">Air jordan 1 Retro high dior</div>
+      <div class="card_price">6.544,00 US$</div>
+      <div class="card_size">
+        <h3>Side:</h3>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+        <span>10</span>
+      </div>
+      <div class="card_color">
+        <h3>Color:</h3>
+        <span class="card_color-green"></span>
+        <span class="card_color-red"></span>
+        <span class="card_color-black"></span>
+      </div>
+      <div class="card_action">
+        <button><a href="thanhtoan.html">Buy now</a></button>
+
+        <button>Add cart</button>
+      </div>
+    </div>
+    <!--đây là thẻ 3-->
+    <div class="card">
+      <div class="card_heart">
+        <i class="bx bx-heart"></i>
+      </div>
+      <div class="card_cart">
+        <i class="bx bx-cart-alt"></i>
+      </div>
+      <div class="card_img">
+        <img style="margin-left:23px; margin-bottom:22px"  src="image/airjodan11.png " width="207px" height="140px"/>
+      </div>
+      <div class="card_title">Air Jordan 11 Retro Bred </div>
+      <div class="card_price">160,00 US$</div>
+      <div class="card_size">
+        <h3>Side:</h3>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+        <span>10</span>
+      </div>
+      <div class="card_color">
+        <h3>Color:</h3>
+        <span class="card_color-green"></span>
+        <span class="card_color-red"></span>
+        <span class="card_color-black"></span>
+      </div>
+      <div class="card_action">
+        <button><a href="thanhtoan.html">Buy now</a></button>
+
+        <button>Add cart</button>
+      </div>
+    </div>
+   </article>
+   <article class="product">
+    <!--đây là thẻ 4-->
+    <div class="card">
+      <div class="card_heart">
+        <i class="bx bx-heart"></i>
+      </div>
+      <div class="card_cart">
+        <i class="bx bx-cart-alt"></i>
+      </div>
+      <div class="card_img">
+        <img src="image/jodan2.png" width="270px" height="159px" />
+      </div>
+      <div class="card_title">Air Jordan 11 Cherry</div>
+      <div class="card_price">100,00 US$</div>
+      <div class="card_size">
+        <h3>Side:</h3>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+        <span>10</span>
+      </div>
+      <div class="card_color">
+        <h3>Color:</h3>
+        <span class="card_color-green"></span>
+        <span class="card_color-red"></span>
+        <span class="card_color-black"></span>
+      </div>
+      <div class="card_action">
+        <button><a href="thanhtoan.html">Buy now</a></button>
+
+        <button>Add cart</button>
+      </div>
+    </div>
+    <!--đây là thẻ 5-->
+    <div class="card">
+      <div class="card_heart">
+        <i class="bx bx-heart"></i>
+      </div>
+      <div class="card_cart">
+        <i class="bx bx-cart-alt"></i>
+      </div>
+      <div class="card_img">
+        <img  src="image/jodan3.png" width="260px" height="138px" />
+      </div>
+      <div class="card_title">Air Jordan 1 Mid Black Gym Red</div>
+      <div class="card_price">400$</div>
+      <div class="card_size">
+        <h3>Side:</h3>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+        <span>10</span>
+      </div>
+      <div class="card_color">
+        <h3>Color:</h3>
+        <span class="card_color-green"></span>
+        <span class="card_color-red"></span>
+        <span class="card_color-black"></span>
+      </div>
+      <div class="card_action">
+        <button><a href="thanhtoan.html">Buy now</a></button>
+
+        <button>Add cart</button>
+      </div>
+    </div>
+    <!--đây là thẻ 6-->
+    <div class="card">
+      <div class="card_heart">
+        <i class="bx bx-heart"></i>
+      </div>
+      <div class="card_cart">
+        <i class="bx bx-cart-alt"></i>
+      </div>
+      <div class="card_img">
+        <img src="image/jodan4.png " width="260px" height="138px" />
+      </div>
+      <div class="card_title">Air Jordan 3 Retro SP White</div>
+      <div class="card_price">400$</div>
+      <div class="card_size">
+        <h3>Side:</h3>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+        <span>10</span>
+      </div>
+      <div class="card_color">
+        <h3>Color:</h3>
+        <span class="card_color-green"></span>
+        <span class="card_color-red"></span>
+        <span class="card_color-black"></span>
+      </div>
+      <div class="card_action">
+        <button><a href="thanhtoan.html">Buy now</a></button>
+
+        <button>Add cart</button>
+      </div>
+    </div>
+   </article>
+   <article class="product" >
+    <!--đây là thẻ 7-->
+    <div class="card">
+      <div class="card_heart">
+        <i class="bx bx-heart"></i>
+      </div>
+      <div class="card_cart">
+        <i class="bx bx-cart-alt"></i>
+      </div>
+      <div class="card_img">
+        <img src="image/van.png" width="260px" height="138px"/>
+      </div>
+      <div class="card_title">Old Skool Smiley Face Checkerboard Black White</div>
+      <div class="card_price">108,00 US$</div>
+      <div class="card_size">
+        <h3>Side:</h3>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+        <span>10</span>
+      </div>
+      <div class="card_color">
+        <h3>Color:</h3>
+        <span class="card_color-green"></span>
+        <span class="card_color-red"></span>
+        <span class="card_color-black"></span>
+      </div>
+      <div class="card_action">
+        <button><a href="thanhtoan.html">Buy now</a></button>
+
+        <button>Add cart</button>
+      </div>
+    </div>
+    <!--đây là thẻ 8-->
+    <div class="card">
+      <div class="card_heart">
+        <i class="bx bx-heart"></i>
+      </div>
+      <div class="card_cart">
+        <i class="bx bx-cart-alt"></i>
+      </div>
+      <div class="card_img">
+        <img style="margin-left:-29px;margin-top:-20px" src="image/van1.png"  width="300px" height="178px" />
+      </div>
+      <div class="card_title">Vans Acer Ni Sp</div>
+      <div class="card_price">400$</div>
+      <div class="card_size">
+        <h3>Side:</h3>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+        <span>10</span>
+      </div>
+      <div class="card_color">
+        <h3>Color:</h3>
+        <span class="card_color-green"></span>
+        <span class="card_color-red"></span>
+        <span class="card_color-black"></span>
+      </div>
+      <div class="card_action">
+        <button><a href="thanhtoan.html">Buy now</a></button>
+
+        <button>Add cart</button>
+      </div>
+    </div>
+    <!--đây là thẻ 9-->
+    <div class="card">
+      <div class="card_heart">
+        <i class="bx bx-heart"></i>
+      </div>
+      <div class="card_cart">
+        <i class="bx bx-cart-alt"></i>
+      </div>
+      <div class="card_img">
+        <img src="image/cv1.png" width="250px" height="138px" />
+      </div>
+      <div class="card_title">Chuck Taylor All-Star 70s High Succulents White </div>
+      <div class="card_price">400$</div>
+      <div class="card_size">
+        <h3>Side:</h3>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+        <span>10</span>
+      </div>
+      <div class="card_color">
+        <h3>Color:</h3>
+        <span class="card_color-green"></span>
+        <span class="card_color-red"></span>
+        <span class="card_color-black"></span>
+      </div>
+      <div class="card_action">
+        <button><a href="thanhtoan.html">Buy now</a></button>
+
+        <button>Add cart</button>
+      </div>
+    </div>
+  </article>
+  <div style="clear: both;"></div>
+  <h2 class="seller_title">BEST <span style="color:rgb(185, 52, 52)">SELLER</span></h2>
+   <article class="product">
+    <!--đây là thẻ 1-->
+    <div class="card">
+      <div class="card_heart">
+        <i class="bx bx-heart"></i>
+      </div>
+      <div class="card_cart">
+        <i class="bx bx-cart-alt"></i>
+      </div>
+      <div class="card_img">
+        <img src="image/jodan7.png" width="250px" height="140px" />
+      </div>
+      <div class="card_title">Jordan 6 Retro Travis Scott British Khaki</div>
+      <div class="card_price">2000$</div>
+      <div class="card_size">
+        <h3>Side:</h3>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+        <span>10</span>
+      </div>
+      <div class="card_color">
+        <h3>Color:</h3>
+        <span class="card_color-green"></span>
+        <span class="card_color-red"></span>
+        <span class="card_color-black"></span>
+      </div>
+      <div class="card_action">
+        <button><a href="thanhtoan.html">Buy now</a></button>
+
+        <button>Add cart</button>
+      </div>
+    </div>
+    <!--đây là thẻ 2-->
+    <div class="card">
+      <div class="card_heart">
+        <i class="bx bx-heart"></i>
+      </div>
+      <div class="card_cart">
+        <i class="bx bx-cart-alt"></i>
+      </div>
+      <div class="card_img">
+        <img style="margin-bottom:-18px;margin-left:-45px" src="image/gc1.png" width="350px" height="152px" />
+      </div>
+      <div class="card_title">Gucci Ace Embroidered Low-Top White Green Red</div>
+      <div class="card_price">400$</div>
+      <div class="card_size">
+        <h3>Side:</h3>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+        <span>10</span>
+      </div>
+      <div class="card_color">
+        <h3>Color:</h3>
+        <span class="card_color-green"></span>
+        <span class="card_color-red"></span>
+        <span class="card_color-black"></span>
+      </div>
+      <div class="card_action">
+        <button><a href="thanhtoan.html">Buy now</a></button>
+
+        <button>Add cart</button>
+      </div>
+    </div>
+    <!--đây là thẻ 3-->
+    <div class="card">
+      <div class="card_heart">
+        <i class="bx bx-heart"></i>
+      </div>
+      <div class="card_cart">
+        <i class="bx bx-cart-alt"></i>
+      </div>
+      <div class="card_img">
+        <img style="margin-left:20px" src="image/cv2.png" width="220px" height="130px" />
+      </div>
+      <div class="card_title">Converse CDG PLAY x CHUCK TAYLOR ALL STAR</div>
+      <div class="card_price">400$</div>
+      <div class="card_size">
+        <h3>Side:</h3>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+        <span>10</span>
+      </div>
+      <div class="card_color">
+        <h3>Color:</h3>
+        <span class="card_color-green"></span>
+        <span class="card_color-red"></span>
+        <span class="card_color-black"></span>
+      </div>
+      <div class="card_action">
+        <button><a href="thanhtoan.html">Buy now</a></button>
+
+        <button>Add cart</button>
+      </div>
+    </div>
+  </article>
+  <!-- Add more articles for additional products -->
+</div>
+<!-- div style="clear: both;"></div> nếu bị dính thì sửa -->
+
+  <article class="review" id="review">
+    <h2  class="review_title" ><span style="color:rgb(185, 52, 52)">CUSTOMER</span> REVIEWS</h2>
+    <div class="review_card">
+    <div class="review_content">
+      <p>
+        "I love PHUCXP-SHOES STORE! They have the best selection of sneakers
+        and their customer service is top-notch. I highly recommend them to
+        all sneakerheads out there!"
+      </p>
+    </div>
+    <div class="review_thongtin">
+      <img src="image/lebron.jpg" width="200px" height="200px" />
+      <div class="user_location">
+        <h4 class="user">Lebron Jame</h4>
+        <p class="location">New York, USA</p>
+      </div>
+      <div class="star">
+        <i class='bx bxs-star bx-flip-horizontal' ></i>
+        <i class='bx bxs-star bx-flip-horizontal' ></i>
+        <i class='bx bxs-star bx-flip-horizontal' ></i>
+        <i class='bx bxs-star bx-flip-horizontal' ></i>
+        <i class='bx bx-star bx-flip-horizontal' ></i>
+      </div>
+    </div>
+    </div>
+    <div class="review_card">
+    <div class="review_content">
+      <p>
+        "Awesome shoes! Love the quality and style.
+         Thanks, PhucXP-Shoes Store! Fast shipping and excellent customer service!
+          Highly recommend to all sneaker lovers! Great value for the price!"
+      </p>
+    </div>
+    <div class="review_thongtin">
+      <img src="image/user3.jpg"   width="200px" height="200px" />
+      <div class="user_location">
+        <h4 class="user">Jane Smith</h4>
+        <p class="location">London, UK</p>
+      </div>
+      <div class="star">
+        <i class='bx bxs-star bx-flip-horizontal' ></i>
+        <i class='bx bxs-star bx-flip-horizontal' ></i>
+        <i class='bx bxs-star bx-flip-horizontal' ></i>
+        <i class='bx bxs-star bx-flip-horizontal' ></i>
+        <i class='bx bx-star bx-flip-horizontal' ></i>
+      </div>
+    </div>
+    </div>
+    <div class="review_card">
+      <div class="review_content">
+        <p>
+          "
+          Awesome shoes! Love the quality and style
+          PhucXP-Shoes Store is my go-to for sneakers! They never disappoint. 
+          Quality, style, and service are top-notch. Highly recommended!
+          Great value for the price!"
+        </p>
+      </div>
+      <div class="review_thongtin">
+        <img src="image/user4.jpg" width="200px" height="200px" />
+        <div class="user_location">
+          <h4 class="user">Khoa Trần smit</h4>
+          <p class="location">New York, USA</p>
+        </div>
+        <div class="star">
+          <i class='bx bxs-star bx-flip-horizontal' ></i>
+          <i class='bx bxs-star bx-flip-horizontal' ></i>
+          <i class='bx bxs-star bx-flip-horizontal' ></i>
+          <i class='bx bxs-star bx-flip-horizontal' ></i>
+          <i class='bx bx-star bx-flip-horizontal' ></i>
+        </div>
+      </div>
+      </div>
+  </article>
+  <div style="clear: both;"></div>
+  <div id="contact">
+    <h2 class="contact_title">CONTACT US</h2>
+  <div class="map_contact">
+    <div class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44149.79803380129!2d105.74400792167968!3d21.016203300000008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab57eded8e41%3A0x1c289dec71a7804a!2sSneaker%20Town!5e1!3m2!1svi!2s!4v1688027619127!5m2!1svi!2s" 
+      width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="form_submit">
+            <form
+            action="https://formsubmit.co/vobinhphuc130804@gmail.com"
+            method="POST" 
+            class="contact-form">
+            <h2 class="title_form">GET IN TOUCH</h2>
+            <input type="text" name="name"  placeholder="Name" required class="contact-input"/>
+            <input type="email" name="email" placeholder="Email" required class="contact-input"/>
+            <select name="country" class="contact-input" >
+              <option>...</option>
+              <option value="Binh Duong">Bình Dương</option>
+              <option value="Ho Chi Minh">Hồ Chí Minh</option>
+              <option value="Da Nang">Đà Nẵng</option>
+              <option value="Phan Thiet">Phan Thiết</option>
+              <option value="Binh Thuan">Bình Thuận</option>
+              <option value="Ha Tinh">Hà Tĩnh</option>
+              <option value="Hai Phong">Hải Phòng</option>
+              <option value="Can Tho">Cần Thơ</option>
+              <option value="Dak Lak">Đắk Lắk</option>
+              <option value="Dong Nai">Đồng Nai</option>
+              <option value="An Giang">An Giang</option>
+              <option value="Ba Ria - Vung Tau">Bà Rịa - Vũng Tàu</option>
+              <option value="Bac Giang">Bắc Giang</option>
+              <option value="Bac Kan">Bắc Kạn</option>
+              <option value="Bac Lieu">Bạc Liêu</option>
+              <option value="Bac Ninh">Bắc Ninh</option>
+              <option value="Ben Tre">Bến Tre</option>
+              <option value="Binh Dinh">Bình Định</option>
+              <option value="Binh Phuoc">Bình Phước</option>
+              <option value="Binh Thuan">Bình Thuận</option>
+              <option value="Ca Mau">Cà Mau</option>
+              <option value="Cao Bang">Cao Bằng</option>
+              <option value="Dak Nong">Đắk Nông</option>
+              <option value="Dien Bien">Điện Biên</option>
+              <option value="Dong Thap">Đồng Tháp</option>
+              <option value="Gia Lai">Gia Lai</option>
+              <option value="Ha Giang">Hà Giang</option>
+              <option value="Ha Nam">Hà Nam</option>
+              <option value="Ha Tinh">Hà Tĩnh</option>
+              <option value="Hai Duong">Hải Dương</option>
+              <option value="Hau Giang">Hậu Giang</option>
+              <option value="Hoa Binh">Hòa Bình</option>
+              <option value="Hung Yen">Hưng Yên</option>
+              <option value="Khanh Hoa">Khánh Hòa</option>
+              <option value="Kien Giang">Kiên Giang</option>
+              <option value="Kon Tum">Kon Tum</option>
+              <option value="Lai Chau">Lai Châu</option>
+              <option value="Lam Dong">Lâm Đồng</option>
+              <option value="Lang Son">Lạng Sơn</option>
+              <option value="Lao Cai">Lào Cai</option>
+              <option value="Long An">Long An</option>
+              <option value="Nam Dinh">Nam Định</option>
+              <option value="Nghe An">Nghệ An</option>
+              <option value="Ninh Binh">Ninh Bình</option>
+              <option value="Ninh Thuan">Ninh Thuận</option>
+              <option value="Phu Tho">Phú Thọ</option>
+              <option value="Quang Binh">Quảng Bình</option>
+              <option value="Quang Nam">Quảng Nam</option>
+              <option value="Quang Ngai">Quảng Ngãi</option>
+              <option value="Quang Ninh">Quảng Ninh</option>
+              <option value="Quang Tri">Quảng Trị</option>
+              <option value="Soc Trang">Sóc Trăng</option>
+              <option value="Son La">Sơn La</option>
+              <option value="Tay Ninh">Tây Ninh</option>
+              <option value="Thai Binh">Thái Bình</option>
+              <option value="Thai Nguyen">Thái Nguyên</option>
+              <option value="Thanh Hoa">Thanh Hóa</option>
+              <option value="Thua Thien - Hue">Thừa Thiên - Huế</option>
+              <option value="Tien Giang">Tiền Giang</option>
+              <option value="Tra Vinh">Trà Vinh</option>
+              <option value="Tuyen Quang">Tuyên Quang</option>
+              <option value="Vinh Long">Vĩnh Long</option>
+              <option value="Vinh Phuc">Vĩnh Phúc</option>
+              <option value="Yen Bai">Yên Bái</option>
+            </select>        
+            <textarea name="message" placeholder="Message" required class="form_textarea"></textarea>   
+            <button type="submit" class="btn-submit"> Submit </button>
+          </form>
+        </div>
+  </div>
+</div>
+  <!-- Add more articles for additional reviews -->
+<!--đây là phần footer-->
+<footer id="last">
+<div class="footer_container">
+  <div class="footer_logo">
+    <a href="#">
+      <img src="image/logo.png" alt="PHUCXP-SHOES" />
+    </a>
+  </div>
+  <nav class="footer_menu">
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="#abouts">ABOUT</a></li>
+      <li><a href="#product">PRODUCT</a></li>
+      <li><a href="#review">REVIEW</a></li>
+      <li><a href="#contact">CONTACT</a></li>
+    </ul>
+  </nav>
+  <div class="footer_social">
+    <a href="https://www.facebook.com/profile.php?id=100042420330434">
+      <i class='bx bxl-facebook'></i>
+    </a>
+    <a href="https://www.instagram.com/bphuccc_/">
+      <i class='bx bxl-instagram'></i>
+    </a>
+    <a href="https://github.com/vbphucdepzai">
+      <i class='bx bxl-github'></i>
+    </a>
+    <a href="https://www.tiktok.com/@bphuc_1308">
+      <i class='bx bxl-tiktok'></i>
+    </a>
+  </div>
+</div>
+<div class="footer_text">
+  <p>&copy; 2023 PHUCXP-SHOES STORE. created by phucvo.</p>
+</div>
+</footer>
+<div onclick="scrollToTop()" class="back_top">
+  <a href="#">
+    <i class='bx bxs-up-arrow-circle bx-fade-up' style='color:#c02828'></i>
+  </a>
+</div>
+<script>
+  if (localStorage.getItem("acc") !== null) {
+  // Kiểm tra xem có mục "acc" trong localStorage hay không
+  // Nếu có, tức là người dùng đã đăng nhập trước đó
+
+  // Lấy giá trị của mục "acc" từ localStorage
+  const acc = localStorage.getItem("acc");
+
+  // Thay đổi nội dung của phần tử có lớp CSS là "logintext" thành "LOGOUT"
+  document.querySelector(".logintext").innerHTML = "LOGOUT";
+
+  // Thay đổi nội dung của phần tử có id "mbs" thành nút LOG OUT với biểu tượng người dùng
+  document.querySelector("#mbs").innerHTML = "<i class='bx bxs-user'></i>LOG OUT";
+
+  // Lấy phần tử biểu tượng trong phần tử có id "mbs"
+  var iconElement = document.querySelector("#mbs i");
+
+  // Thiết lập kích thước và định dạng cho biểu tượng
+  iconElement.style.fontSize = "30px";
+  iconElement.style.fontWeight = "bold";
+} else {
+  // Nếu không có mục "acc" trong localStorage, tức là người dùng chưa đăng nhập
+
+  // Thay đổi nội dung của phần tử có lớp CSS là "logintext" thành "LOGIN"
+  document.querySelector(".logintext").innerHTML = "LOGIN";
+
+}
+
+function logout() {
+  // Xử lý các thao tác đăng xuất ở đây
+
+  // Sau khi đăng xuất thành công, cập nhật nội dung phần tử ".logintext" thành "LOGIN"
+  document.querySelector(".logintext").innerHTML = "LOGIN";
+
+  // Xóa mục "acc" khỏi localStorage
+  localStorage.removeItem("acc");
+}
+</script>
+<script>
+  // Định nghĩa hàm scrollToTop để cuộn lên đầu trang
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth", // Thay đổi 'scroll' thành 'smooth' để có chuyển động mượt hơn
+  });
+}
+
+// Lấy phần tử có lớp CSS là '#slide'
+var slide = document.querySelector("#slide");
+// Lấy phần tử có lớp CSS là '.back_top'
+var back_top = document.querySelector(".back_top");
+// Đăng ký sự kiện 'scroll' cho cửa sổ trình duyệt
+window.addEventListener("scroll", function () {
+  // Lấy vị trí hiện tại của thanh cuộn
+  var scrollPosition = window.scrollY;
+  // Lấy vị trí của phần tử '#slide' so với đỉnh của trang
+  var slidePosition = slide.offsetTop;
+  // Kiểm tra nếu vị trí cuộn lớn hơn vị trí của '#slide'
+  if (scrollPosition > slidePosition) {
+    back_top.style.display = "block";
+  } else {
+    // Ẩn phần tử '.back_top'
+    back_top.style.display = "none";
+  }
+});
+
+</script>
+  </body>
+</html>
